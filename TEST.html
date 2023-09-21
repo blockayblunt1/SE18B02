@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <form>
+        <label for="firstnumber">Enter your first number: </label>
+        <input type="number" id="firstnumber"><br><br>
+
+        <label for="secondnumber">Enter your second number: </label>
+        <input type="number" id="secondnumber"><br><br>
+
+        <button type="button" onclick="calculate()">Calculate</button><br><br>
+
+        <p>Results:</p>
+        <p id="total"></p>
+        <p id="minus"></p>
+        <p id="multiply"></p>
+        <p id="divide"></p>
+    </form>
+
+    <script>
+        function calculate() {
+            var firstnumber = parseFloat(document.getElementById("firstnumber").value);
+            var secondnumber = parseFloat(document.getElementById("secondnumber").value);
+
+            var total = firstnumber + secondnumber;
+            var minus = firstnumber - secondnumber;
+            var multiply = firstnumber * secondnumber;
+            var divide = firstnumber / secondnumber;
+
+            document.getElementById("total").textContent = "Total: " + total;
+            document.getElementById("minus").textContent = "Minus: " + minus;
+            document.getElementById("multiply").textContent = "Multiply: " + multiply;
+            document.getElementById("divide").textContent = "Divide: " + divide;
+        }
+    </script>
+</body>
+</html>
